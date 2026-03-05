@@ -128,12 +128,12 @@ const ImageUploader = ({ onButtonClick }) => {
       formData.append('email', email);
 
       const serverUrl = selection === 'gold'
-        ? 'http://localhost:3001/api/upload/model1'
-        : selection === 'silver'
-        ? 'http://localhost:3001/api/upload/model2'
-        : selection === 'gold-gemstone'
-        ? 'http://localhost:3001/api/upload/model3'
-        : 'http://localhost:3001/api/upload/model1';
+  ? 'https://jewellery-azbm.onrender.com/api/upload/model1'
+  : selection === 'silver'
+  ? 'https://jewellery-azbm.onrender.com/api/upload/model2'
+  : selection === 'gold-gemstone'
+  ? 'https://jewellery-azbm.onrender.com/api/upload/model3'
+  : 'https://jewellery-azbm.onrender.com/api/upload/model1';
 
       const response = await fetch(serverUrl, {
         method: 'POST',
@@ -174,7 +174,7 @@ const ImageUploader = ({ onButtonClick }) => {
       saveImagesFormData.append('generated', blob);
       saveImagesFormData.append('email', email);
 
-      const saveResponse = await fetch('http://localhost:3001/api/images/save', {
+      const saveResponse = await fetch('https://jewellery-azbm.onrender.com/api/images/save', {
         method: 'POST',
         headers: { 
           'Authorization': `Bearer ${token}`,
