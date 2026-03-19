@@ -1,5 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
@@ -31,6 +32,7 @@ const App = () => {
         <Route path="/Profile" element={<Profile />} />
       </Routes>
       <Footer/>
+      <SpeedInsights />
     </div>
   );
 };
